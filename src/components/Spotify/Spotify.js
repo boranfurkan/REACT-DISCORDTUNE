@@ -15,7 +15,7 @@ function Spotify({ list }) {
     const handleSubmit = async (event) => {
         event.preventDefault()
         const listId = listLink.split("?")[0].split("/")[4]
-        const response = await axios.get(`https://discord-tune.herokuapp.com/api/v1/spotify?listId=${listId}`)
+        const response = await axios.get(`https://discord-tunes-back-end.herokuapp.com/api/v1/spotify?listId=${listId}`)
         if (response.status === 200) {
             const songArray = []
             response.data.items.map((song) => {

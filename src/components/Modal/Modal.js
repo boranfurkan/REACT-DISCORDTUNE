@@ -14,7 +14,7 @@ function Modal({ list, onClose }) {
     const [results, setResults] = useState([])
 
     const fetchTrends = useCallback(async () => {
-        const response = await axios.get('https://discord-tune.herokuapp.com/api/v1/youtube?q=uzi');
+        const response = await axios.get('https://discord-tunes-back-end.herokuapp.com/api/v1/youtube?q=uzi');
         console.log(response)
         setResults(response.data.items)
     }, []);
@@ -46,7 +46,7 @@ function Modal({ list, onClose }) {
 
     const fetchSearchSuggestions = async (event) => {
         event.preventDefault()
-        const response = await axios.get(`https://discord-tune.herokuapp.com/api/v1/youtube?q=${searchTerm}`);
+        const response = await axios.get(`https://discord-tunes-back-end.herokuapp.com/api/v1/youtube?q=${searchTerm}`);
         setResults(response.data.items)
         setSearchTerm("")
     }

@@ -8,12 +8,12 @@ function Provider({ children }) {
     const [lists, setLists] = useState([])
 
     const fetchLists = useCallback(async () => {
-        const response = await axios.get('https://discord-tune.herokuapp.com/api/v1/lists');
+        const response = await axios.get('https://discord-tunes-back-end.herokuapp.com/api/v1/lists');
         setLists(response.data.lists);
     }, []);
 
     const createList = async (listName, creatorName, chosenCover) => {
-        const response = await axios.post('https://discord-tune.herokuapp.com/api/v1/lists', {
+        const response = await axios.post('https://discord-tunes-back-end.herokuapp.com/api/v1/lists', {
             name: listName, createdBy: creatorName, songs: [], albumCover: chosenCover
         });
 
@@ -21,7 +21,7 @@ function Provider({ children }) {
     }
 
     const deleteListByName = async (name) => {
-        const response = await axios.delete('https://discord-tune.herokuapp.com/api/v1/lists/?listname=' + name);
+        const response = await axios.delete('https://discord-tunes-back-end.herokuapp.com/api/v1/lists/?listname=' + name);
 
         setLists([...lists, response.data.list])
 
@@ -33,7 +33,7 @@ function Provider({ children }) {
     };
 
     const addSong = async (listname, suggestion) => {
-        const response = await axios.post('https://discord-tune.herokuapp.com/api/v1/lists/songs?listname=' + listname,
+        const response = await axios.post('https://discord-tunes-back-end.herokuapp.com/api/v1/lists/songs?listname=' + listname,
             { name: suggestion.snippet.title, singer: suggestion.snippet.channelTitle, url: suggestion.id.videoId, albumCover: suggestion.snippet.thumbnails.default.url });
         const updatedLists = lists.filter((list) => {
             return list.name !== listname;
@@ -44,7 +44,7 @@ function Provider({ children }) {
 
     const deleteSong = async (listname, songId) => {
 
-        const response = await axios.delete('https://discord-tune.herokuapp.com/api/v1/lists/songs?listname=' + listname + '&songId=' + songId)
+        const response = await axios.delete('https://discord-tunes-back-end.herokuapp.com/api/v1/lists/songs?listname=' + listname + '&songId=' + songId)
 
         const updatedLists = lists.filter((list) => {
             return list.name !== listname;
@@ -55,7 +55,7 @@ function Provider({ children }) {
 
     const addSpotifyList = async (listname, songArray) => {
         const data = { items: songArray }
-        const response = await axios.put('https://discord-tune.herokuapp.com/api/v1/lists/songs?listname=' + listname, data);
+        const response = await axios.put('https://discord-tunes-back-end.herokuapp.com/api/v1/lists/songs?listname=' + listname, data);
         const updatedLists = lists.filter((list) => {
             return list.name !== listname;
         });
