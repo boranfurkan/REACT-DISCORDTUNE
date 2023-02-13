@@ -1,0 +1,146 @@
+label {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.Main {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.Main h2 {
+  border: 3px solid #ffff;
+  padding: 1%;
+  margin: 0 5%;
+  border-radius: 15px;
+  font-weight: 400;
+}
+
+.Playlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 0;
+}
+
+.Playlist > * {
+  margin-right: 7%;
+}
+
+.CoverShow {
+  display: flex;
+  max-width: 500px;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.Chosen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.Chosen > img {
+  margin-top: 5%;
+  max-width: 150px;
+  --color: #ffff; /* the border color */
+  --border: 6px; /* the border thickness*/
+  --offset: 20px; /* control the offset*/
+  --gap: 12px; /* the gap on hover */
+
+  --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),
+    var(--color) 0;
+  --_o: calc(3 * var(--offset));
+  padding: calc(var(--gap) + var(--border))
+    calc(var(--gap) + var(--border) + var(--offset))
+    calc(var(--gap) + var(--border) + var(--offset))
+    calc(var(--gap) + var(--border));
+  background: linear-gradient(var(--_c)) var(--_o) var(--_o),
+    linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
+  background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.Chosen > img:hover {
+  background-position: 0px 0px;
+  background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+  filter: grayscale(0);
+}
+
+.CoverShow > input {
+  width: 50%;
+  max-width: 80px;
+  margin: 10px;
+  --g: 4px; /* the gap */
+  --b: 3px; /* border thickness*/
+  --c: #ffff; /* the color */
+
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background: var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+    var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(60%);
+  transition: 0.3s;
+  outline: none;
+}
+
+.CoverShow > input:focus {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+
+.CoverShow > input:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+}
+
+.Form > * {
+  margin: 3% 0;
+  margin-left: 10px;
+}
+
+.Form > button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 75%;
+  margin-top: 5%;
+}
+
+.Form > button:hover {
+  background: #fff;
+  color: #4568dc;
+}
+
+.Form > input {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #fff;
+  border-radius: 5px;
+  padding: 14px 28px;
+  outline: none;
+  min-width: 118%;
+}

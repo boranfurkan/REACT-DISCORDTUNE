@@ -1,0 +1,25 @@
+.SuggestionShow {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 30%);
+  align-items: center;
+  border: 2px solid #fff;
+  min-height: 110px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.SuggestionShow > img {
+  max-width: 80px;
+  justify-self: self-start;
+  margin-left: 5%;
+}
+
+.SuggestionShow > h5 {
+  font-size: 16px;
+}
+
+.SuggestionShow > p {
+  font-size: 12px;
+  justify-self: flex-end;
+}

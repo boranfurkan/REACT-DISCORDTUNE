@@ -1,0 +1,68 @@
+.Backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: auto;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.ModalBackground {
+  width: 50%;
+  height: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999999999;
+}
+
+.Wraper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 25px;
+  min-height: 200px;
+  text-align: center;
+}
+
+.Messages {
+  width: 100%;
+  background: #b06ab3;
+  background: linear-gradient(to right, #b06ab3 37%, #4568dc 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Messages > p {
+  font-size: 1rem;
+}
+
+.Buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Buttons > * {
+  background-image: linear-gradient(to right, #b06ab3, 50%, #4568dc 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+
+.Buttons > *:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}

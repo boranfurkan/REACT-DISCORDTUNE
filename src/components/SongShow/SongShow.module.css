@@ -1,0 +1,44 @@
+.SongShow {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 32%);
+  align-items: center;
+  border: 2px solid #fff;
+  min-height: 110px;
+  cursor: auto;
+  border-radius: 5px;
+}
+
+.SongShow > img {
+  max-width: 80px;
+  justify-self: self-start;
+  margin-left: 5%;
+}
+
+.SongShow > h5 {
+  font-size: 16px;
+}
+
+.SongShow > div {
+  font-size: 12px;
+  justify-self: flex-end;
+}
+
+.Buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Buttons > button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

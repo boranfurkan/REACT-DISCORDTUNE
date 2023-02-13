@@ -1,0 +1,16 @@
+.Main h2 {
+  border: 3px solid #ffff;
+  padding: 1%;
+  margin: 0 5%;
+  border-radius: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.Panel {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, 47%);
+  justify-content: space-between;
+  margin: 3% 7%;
+}

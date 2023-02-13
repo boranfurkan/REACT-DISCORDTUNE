@@ -1,0 +1,53 @@
+.Main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 5%;
+  border: 3px solid #fff;
+  padding: 3%;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.Click {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 76%;
+}
+
+.Click:first-child > img {
+  margin-right: 20%;
+}
+
+.Buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-start;
+}
+
+.Buttons > button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Buttons :last-child {
+  margin-left: 10%;
+}
+
+.Click > img {
+  max-width: 80px;
+  outline: none;
+}

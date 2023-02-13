@@ -1,0 +1,40 @@
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 40vh;
+}
+
+.Form > input {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #fff;
+  border-radius: 5px;
+  padding: 14px 28px;
+  width: 70%;
+}
+
+.Form > button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 40%;
+}
+
+.Form > button:hover {
+  background: #fff;
+  color: #4568dc;
+}
+
+.Form > * {
+  margin: 1% 0%;
+}
