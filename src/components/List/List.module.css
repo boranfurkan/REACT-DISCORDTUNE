@@ -10,7 +10,7 @@
 .Panel {
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, 47%);
+  grid-template-columns: repeat(auto-fill, 45%);
   justify-content: space-between;
   margin: 3% 7%;
 }

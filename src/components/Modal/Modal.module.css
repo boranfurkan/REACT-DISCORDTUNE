@@ -70,8 +70,9 @@
   cursor: pointer;
   border-radius: 5px;
 }
+
 .Input {
-  min-width: 500px;
+  min-width: -webkit-fill-available;
 }
 
 .Input > button {
@@ -79,9 +80,9 @@
   border: 2px solid #fff;
   background-color: transparent;
   color: #fff;
-  padding: 8px 18px;
+  padding: 14px 28px;
   font-size: 16px;
-  margin-left: 5%;
+  margin-left: 2%;
   border-radius: 5px;
   cursor: pointer;
 }

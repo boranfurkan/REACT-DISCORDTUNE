@@ -15,7 +15,6 @@ function Modal({ list, onClose }) {
 
     const fetchTrends = useCallback(async () => {
         const response = await axios.get('https://discord-tunes-back-end.herokuapp.com/api/v1/youtube?q=uzi');
-        console.log(response)
         setResults(response.data.items)
     }, []);
 
@@ -34,6 +33,7 @@ function Modal({ list, onClose }) {
     const handleAddClick = () => {
         setAddMode(true)
     }
+
     const handleSpotifylick = () => {
         setSpotify(true)
     }
@@ -83,7 +83,7 @@ function Modal({ list, onClose }) {
                     <button type="button" onClick={handleBackClick}><BsArrowLeft /></button>
                 </div>
                 <div className={styles.Input}>
-                    <input onChange={handleChange} value={searchTerm} type="text" maxLength={20} minLength={1} required autoFocus></input>
+                    <input onChange={handleChange} value={searchTerm} type="text" maxLength={40} minLength={1} required autoFocus></input>
                     <button type="submit">SEARCH</button>
                 </div>
             </form>
@@ -94,7 +94,7 @@ function Modal({ list, onClose }) {
     const spotifyContent = (
         <div className={styles.Songs}>
             <div className={styles.Info}>
-                <h4>LIST SONGS</h4>
+                <h4>SPOTIFY SONGS</h4>
                 <button type="button" onClick={handleBackClick}><BsArrowLeft /></button>
             </div>
             <Spotify list={list} />
